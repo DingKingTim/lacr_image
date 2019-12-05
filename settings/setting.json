@@ -1,0 +1,46 @@
+{
+  "env": {
+    "process_num": 4
+  },
+
+  "ip_tv": {
+    "url": "http://10.120.10.73:8899/rpc/data/std/channel/pagelist?page=1&pageSize=5000&name=IPTV&checked=1",
+    "local": "/data/iptv.json"
+  },
+
+  "syn_queue": {
+    "brokers": "kafka_01:9092,kafka_02:9092",
+    "topic": "tv_logo",
+    "partition_start": 8,
+    "partition_end": 11
+  },
+
+  "status": {
+    "host": "10.120.100.65",
+    "pwd": "Gzdatun1161n",
+    "db": 5,
+    "prefix": "kfk_part"
+  },
+
+  "acr": {
+    "queue_cap": 100,
+    "workers": 30,
+    "log_dir": "/data/lacr_real_log",
+    "url": "http://10.120.223.3:5001/classify_upload"
+  },
+
+  "img": {
+    "archive_dir": "/data/snapshot_archives_v1",
+    "dev_list": "list.csv",
+    "meta_file": "metafile.txt"
+  },
+
+  "log": {
+    "path": "",
+    "file": "log",
+    "format": "%(asctime)s %(filename)s[tid:%(thread)d][%(module)s:%(funcName)s:%(lineno)d][%(levelname)s]->%(message)s",
+    "size": 26214400,
+    "count": 10,
+    "level": 20
+  }
+}
